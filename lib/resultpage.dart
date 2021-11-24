@@ -9,6 +9,7 @@ class resultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF0A0E21),
       appBar: AppBar(
         backgroundColor: Colors.teal,
         title: const Text('GPF Result'),
@@ -60,10 +61,10 @@ class resultPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(
-                      height: 100,
+                      height: 80,
                     ),
                     const Text(
-                      'This is Your Total GPF\n ',
+                      'This is Your Total Actual Amount\n ',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 25.0,
@@ -74,12 +75,37 @@ class resultPage extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      obj.calResult(),
+                      obj.actualAmountt(),
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 25.0,
                         color: Colors.white,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const Text(
+                      'This is Your Total Amount including GPF\n ',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 25.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      obj.gpfAmountt(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 25.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 80,
                     ),
                     BottomButton(
                       buttonTitle: 'Re-Calculate',

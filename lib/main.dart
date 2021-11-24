@@ -18,7 +18,7 @@ class GPFPage extends StatefulWidget {
 }
 
 class _GPFPageState extends State<GPFPage> {
-  var difference = 2;
+  var difference = 365;
   var selectedDate1 = DateTime.now();
   var selectedDate2 = DateTime.now();
   int height = 2500;
@@ -236,6 +236,7 @@ class _GPFPageState extends State<GPFPage> {
             buttonTitle: 'CALCULATE',
             onTap: () {
               difference = selectedDate2.difference(selectedDate1).inDays;
+              obj.calculate(difference, height);
               Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context) => resultPage()));
             },
