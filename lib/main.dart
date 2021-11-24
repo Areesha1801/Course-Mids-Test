@@ -11,7 +11,7 @@ CalBrain obj = CalBrain();
 
 class GPFPage extends StatefulWidget {
   const GPFPage({Key key}) : super(key: key);
-  static double holder_2 = 1;
+  static double holder_2 = 1;2
   static List<int> myList_2 = [];
   @override
   _GPFPageState createState() => _GPFPageState();

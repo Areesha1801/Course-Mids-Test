@@ -8,7 +8,7 @@ class CalBrain {
   void calculate(var days, int deductAmount) {
     totalYears = daysToYears(days);
     actualAmount = (deductAmount * (totalYears / 12));
-    gpf = actualAmount + ((actualAmount * totalYears) / 100);
+    gpf = actualAmount + ((actualAmount * (totalYears / 12)) / 100);
   }
 
   double daysToYears(var days) {
